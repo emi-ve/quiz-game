@@ -34,10 +34,25 @@
   -webkit-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
 -moz-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
 box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
+}
 
-
-
-  
+.start-button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #032a72;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
+  -moz-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
+  box-shadow: 1px 2px 5px 0px rgba(1,15,38,1);
 }
 
 .App-link {
