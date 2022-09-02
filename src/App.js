@@ -19,7 +19,6 @@ function App() {
   // }
   return (
     <div className="App">
-      <header className="App-header">This is my base app</header>
       <div className="quiz-box">
         <button className="start-button" onClick={() => setCompIsShown(true)}>
           Start
