@@ -4,19 +4,7 @@ import Choices from "./components/Choices/choices";
 
 function App() {
   const [compIsShown, setCompIsShown] = useState(false);
-  // const [isShow, setIsShow] = useState(false);
 
-  // useEffect(() => {
-  //   setIsShow(isBoolean);
-  // }, [isBoolean, setIsShow]);
-
-  // const shufler = () => {
-  //   setIsShow(false);
-  // };
-
-  // if (!isShow) {
-  //   return null;
-  // }
   return (
     <div className="App">
       <div className="quiz-box">

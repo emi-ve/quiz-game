@@ -1,9 +1,6 @@
 .App {
   text-align: center;
- 
 }
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,7 +10,7 @@
 
 .App-header {
   background-color: #032a72;
- 
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,14 +26,17 @@
   overflow: auto;
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   border: solid #ffbf00;
-  -webkit-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
--moz-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
+  -webkit-box-shadow: 10px 11px 21px 0px rgba(1, 15, 38, 1);
+  -moz-box-shadow: 10px 11px 21px 0px rgba(1, 15, 38, 1);
+  box-shadow: 10px 11px 21px 0px rgba(1, 15, 38, 1);
 }
 
-.start-button{
+.start-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,9 +50,9 @@ box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  -webkit-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
-  -moz-box-shadow: 10px 11px 21px 0px rgba(1,15,38,1);
-  box-shadow: 1px 2px 5px 0px rgba(1,15,38,1);
+  -webkit-box-shadow: 10px 11px 21px 0px rgba(1, 15, 38, 1);
+  -moz-box-shadow: 10px 11px 21px 0px rgba(1, 15, 38, 1);
+  box-shadow: 1px 2px 5px 0px rgba(1, 15, 38, 1);
 }
 
 .App-link {
