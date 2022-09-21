@@ -1,12 +1,11 @@
 import "./styles.css";
+import React, { useState } from "react";
 
 const Choices = () => {
   // if button is clicked, store correct/incorrect as a boolean. have an array state...start w/ 0, add 1 when it is right, subtract 1 when incorrect
   // once answered, display next question
   // idea: maybe make animation as next question appears?
 
-  // const correctCount = 0;
-  // const incorrectCount = 0;
   // const [quizComplete, setQuizComplete] = useState(false)
 
   const questions = [
@@ -14,7 +13,7 @@ const Choices = () => {
       question:
         "How many whiskers does the average cat have on each side of its face?",
       answers: [12, 4, 6, 10],
-      correctAnswerIndex: 0,
+      correctAnswerIndex: 12,
       id: 1,
     },
     {
@@ -62,19 +61,11 @@ const Choices = () => {
 
   // Setting the game to start with the first question
   let i = 0;
-  // const selectedAnswer =
+  // const correctCount = 0;
+  // const incorrectCount = 0;
 
-  // const clickedButton1 = () => {
-  //   if (selectedAnswer.indexOf() === questions.correctAnswerIndex) {
-  //     return i + 1;
-  //   }
-  // };
-
-  const clickedButton1 = () => {
-    return console.log(`you clicked the button`);
-  };
-
-  console.log(questions[0].question);
+  const [clickedCorrectAnswer, setClickedCorrectAnswer] = useState(false);
+  const [clickedIncorrectAnswer, setclickedIncorrectAnswer] = useState(false);
 
   // once answer is selected, index number increases.
   return (
@@ -83,12 +74,29 @@ const Choices = () => {
       <div className="answers-group">
         {questions[i].answers.map((a) => {
           return (
-            <button className="answers-1" onClick={clickedButton1}>
+            <button
+              className="answers-1"
+              value={a}
+              key={Math.random() + 1.3456}
+              onClick={
+                questions[i].correctAnswerIndex === a
+                  ? () => setClickedCorrectAnswer(clickedCorrectAnswer + 1)
+                  : questions[i].correctAnswerIndex !== a
+                  ? () => setclickedIncorrectAnswer(clickedIncorrectAnswer + 1)
+                  : console.log("ERROR")
+              }
+            >
+              {" "}
               {a}
             </button>
           );
         })}
       </div>
+      <p>correct:{clickedCorrectAnswer}</p>
+      <p>
+        incorrect:
+        {clickedIncorrectAnswer}
+      </p>
     </div>
   );
 };
