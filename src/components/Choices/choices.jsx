@@ -64,30 +64,48 @@ const Choices = () => {
   // const correctCount = 0;
   // const incorrectCount = 0;
 
+  // const [currentQuestion, setCurrentQuestion] = useState(0);
   const [clickedCorrectAnswer, setClickedCorrectAnswer] = useState(false);
   const [clickedIncorrectAnswer, setclickedIncorrectAnswer] = useState(false);
+
+  // const findCurrentQuestion = () => {
+  //   if(questions[i].question.id === currentQuestion) {
+  //     {questions[i].question}
+  //   }
+  //   return {questions[i].question}
+  // }
 
   // once answer is selected, index number increases.
   return (
     <div className="question">
       {questions[i].question}
       <div className="answers-group">
-        {questions[i].answers.map((a) => {
+        {questions[i].answers.map((individualAnswer) => {
           return (
             <button
               className="answers-1"
-              value={a}
+              value={individualAnswer}
               key={Math.random() + 1.3456}
               onClick={
-                questions[i].correctAnswerIndex === a
-                  ? () => setClickedCorrectAnswer(clickedCorrectAnswer + 1)
-                  : questions[i].correctAnswerIndex !== a
-                  ? () => setclickedIncorrectAnswer(clickedIncorrectAnswer + 1)
+                questions[i].correctAnswerIndex === individualAnswer
+                  ? () => {
+                      setClickedCorrectAnswer(clickedCorrectAnswer + 1);
+                      i++;
+                      console.log(questions[i].question);
+                      console.log(i);
+                    }
+                  : questions[i].correctAnswerIndex !== individualAnswer
+                  ? () => {
+                      setclickedIncorrectAnswer(clickedIncorrectAnswer + 1);
+                      i++;
+                      console.log(questions[i].question);
+                      console.log(i);
+                    }
                   : console.log("ERROR")
               }
             >
               {" "}
-              {a}
+              {individualAnswer}
             </button>
           );
         })}
